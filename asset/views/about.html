@@ -6,9 +6,9 @@
         <button
           type="button"
           id="close"
-          class="btn-close btn-close-white fs-4 shadow-none"
+          class="btn-close-custom shadow-none"
           aria-label="Close"
-        ></button>
+        ><i class="bi bi-x-lg fs-5"></i></button>
       </div>
       <div class="col mt-5">
         <div class="brasley-medium palet-abu fs-6 text-center">
@@ -58,7 +58,7 @@
             <tr>
               <td>Age</td>
               <td>:</td>
-              <td>19 Years</td>
+              <td id="my-age">21 Years</td>
             </tr>
           </table>
           <table
@@ -70,7 +70,7 @@
             <tr>
               <td>Email</td>
               <td>:</td>
-              <td>bintangal@munn.id</td>
+              <td>bintangalsyahadat1@gmail.com</td>
             </tr>
             <tr>
               <td>From</td>
@@ -119,22 +119,22 @@
         </div>
         <div class="display-6 genera-semi-bold">My Services</div>
         <div class="row mt-5">
-          <div class="col-lg-4 col-md-6 col-sm-12">
+          <div class="col-lg-4 col-md-6 col-sm-12 mb-4">
             <div class="item">
               <div class="service-box p-4">
                 <i
-                  class="icon palet-green p-2 bi bi-wordpress"
+                  class="icon palet-green p-2 bi bi-code-slash"
                   style="font-size: 50px"
                 ></i>
                 <div class="item-info mt-3">
                   <div class="fs-4 info-title harmonia">Web Development</div>
-                  <div class="fs-4 info-value harmonia palet-abu">-</div>
+                  <div class="fs-6 info-value harmonia palet-abu">Building clean, interactive, and modern web applications with Laravel, PHP, and JavaScript.</div>
                 </div>
               </div>
               <div class="line-bottom"></div>
             </div>
           </div>
-          <div class="col-lg-4 col-md-6 col-sm-12">
+          <div class="col-lg-4 col-md-6 col-sm-12 mb-4">
             <div class="item">
               <div class="service-box p-4">
                 <i
@@ -143,22 +143,22 @@
                 ></i>
                 <div class="item-info mt-3">
                   <div class="fs-4 info-title harmonia">Fully Responsive</div>
-                  <div class="fs-4 info-value harmonia palet-abu">-</div>
+                  <div class="fs-6 info-value harmonia palet-abu">Crafting adaptive layouts that look great and feel fluid on mobile, tablet, and desktop.</div>
                 </div>
               </div>
               <div class="line-bottom"></div>
             </div>
           </div>
-          <div class="col-lg-4 col-md-6 col-sm-12">
+          <div class="col-lg-4 col-md-6 col-sm-12 mb-4">
             <div class="item">
               <div class="service-box p-4">
                 <i
-                  class="icon palet-green p-2 bi bi-globe"
+                  class="icon palet-green p-2 bi bi-database-check"
                   style="font-size: 50px"
                 ></i>
                 <div class="item-info mt-3">
-                  <div class="fs-4 info-title harmonia">Branding</div>
-                  <div class="fs-4 info-value harmonia palet-abu">-</div>
+                  <div class="fs-4 info-title harmonia">Backend & API</div>
+                  <div class="fs-6 info-value harmonia palet-abu">Developing secure RESTful APIs, efficient database structures, and smooth integrations.</div>
                 </div>
               </div>
               <div class="line-bottom"></div>
@@ -191,4 +191,9 @@
   var x = window.matchMedia("(max-width: 991px)");
   myFunction(x); // Call listener function at run time
   x.addListener(myFunction); // Attach listener function on state changes
+
+  // Auto calculate age dynamically based on birth year 2003
+  var currentYear = new Date().getFullYear();
+  var age = currentYear - 2003;
+  $('#my-age').text(age + ' Years');
 </script>

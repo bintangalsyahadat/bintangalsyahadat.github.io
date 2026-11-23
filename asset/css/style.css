@@ -400,6 +400,102 @@ a:hover {
   background-color: #009e66;
 }
 
+/* Close & Back Button */
+.btn-close-custom {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    width: 40px;
+    height: 40px;
+    background: rgba(255, 255, 255, 0.1);
+    backdrop-filter: blur(8px);
+    -webkit-backdrop-filter: blur(8px);
+    border: 1px solid rgba(255, 255, 255, 0.15);
+    border-radius: 50%;
+    color: #fff;
+    text-decoration: none;
+    transition: all 0.25s ease;
+}
+
+.btn-close-custom:hover {
+    background: rgba(0, 158, 102, 0.8);
+    border-color: #009e66;
+    color: #fff;
+    transform: rotate(90deg);
+}
+
+/* Heading Decorative Line & Moving Square Animation */
+.line {
+    position: relative;
+    overflow: hidden;
+}
+
+.square {
+    animation: moveSquare 2s infinite ease-in-out alternate;
+}
+
+.square.mx-1 {
+    animation-delay: 0.2s;
+}
+
+@keyframes moveSquare {
+    0% {
+        transform: translateX(0);
+    }
+    100% {
+        transform: translateX(55px);
+    }
+}
+
+/* Tech Skill Badges */
+.skill-card {
+    background: #202020;
+    border: 1px solid #2e2e2e;
+    border-radius: 12px;
+    padding: 24px;
+    height: 100%;
+    transition: all 0.25s ease;
+}
+
+.skill-card:hover {
+    border-color: #009e66;
+    transform: translateY(-3px);
+}
+
+.skill-card-title {
+    color: #fff;
+    font-size: 1.15rem;
+    margin-bottom: 18px;
+    display: flex;
+    align-items: center;
+}
+
+.skill-badge {
+    display: inline-flex;
+    align-items: center;
+    background-color: #141414;
+    border: 1px solid #333;
+    color: #e0e0e0;
+    padding: 8px 14px;
+    border-radius: 8px;
+    font-size: 0.9rem;
+    margin-right: 8px;
+    margin-bottom: 10px;
+    transition: all 0.2s ease;
+}
+
+.skill-badge i {
+    color: #009e66;
+    margin-right: 8px;
+    font-size: 1.1rem;
+}
+
+.skill-badge:hover {
+    border-color: #009e66;
+    color: #fff;
+    background-color: #1a1a1a;
+}
+
 .carousel-control-prev-icon {
   background-image: url("data:image/svg+xml;charset=utf8,%3Csvg xmlns='http://www.w3.org/2000/svg' fill='%23009e66' viewBox='0 0 8 8'%3E%3Cpath d='M5.25 0l-4 4 4 4 1.5-1.5-2.5-2.5 2.5-2.5-1.5-1.5z'/%3E%3C/svg%3E") !important;
 }
